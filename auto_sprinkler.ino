@@ -31,7 +31,7 @@ void loop() {
   // Water Line Sensing
   int i = 0;
   double dryestSensor[2] = {1, -1};
-  for (auto sensor : moistureSensors) {
+  for (auto &sensor : moistureSensors) {
     moistureSensorPercents[i] = ((moistureSensorPercents[i] * 100) + ((airValue - analogRead(sensor)) / (airValue - waterValue))) / 101;
 
     // Find Dryest
@@ -77,7 +77,7 @@ void loop() {
     
     // Valve Status Apply
     i = 0;
-    for (auto valve : controlValves) {
+    for (auto &valve : controlValves) {
       if (valveStates[0][i]) {
         if (!valveStates[1][i]) {
           digitalWrite(valve, HIGH);
