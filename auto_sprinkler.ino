@@ -1,7 +1,5 @@
 const double airValue = 890;   //you need to replace this value with Value_1
 const double waterValue = 730;  //you need to replace this value with Value_2
-double soilMoistureValue = 0;
-
 const double openValve = 0.6;
 const double closeValve = 0.85;
 
