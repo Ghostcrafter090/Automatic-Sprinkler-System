@@ -72,7 +72,7 @@ void loop() {
     valveStates[0][(int)dryestSensor[1]] = true;
   }
 
-  // Status Messaging
+  // Once Per Second Timer
   if (millis() > statusTic) {
     
     // Valve Status Apply
@@ -103,7 +103,8 @@ void loop() {
       }
       i = i + 1;
     }
-    
+
+    // Status Messaging
     Serial.println("");
     Serial.print("{\"messageType\":\"status\",\"sensorValues\":{");
     i = 0;
