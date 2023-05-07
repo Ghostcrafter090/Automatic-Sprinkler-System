@@ -24,7 +24,7 @@ void setup() {
   debugPin = controlValves[-1] + 1;
   pinMode(debugPin, INPUT);
 
-  Serial.begin(115200); // open serial port, set the baud rate to 9600 bps
+  Serial.begin(115200); // open serial port, set the baud rate to 115200 bps
   Serial.println("started.");
 }
 
